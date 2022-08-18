@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Project } from 'src/app/models/Project';
+import { Injectable } from '@angular/core';
+import { Project } from '../models/Project';
 
-@Component({
-  selector: 'ngprj-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class ProjectComponent implements OnInit {
-  selectedProject!: Project;
-  projects:Project[] = [
+export class ProjectService {
+  project:Project[] = [
     {
       id:1,
       code: 'firstP00',
@@ -45,20 +42,30 @@ export class ProjectComponent implements OnInit {
       task:[]
 
     },
-  ];
+  ]
+
   constructor() { }
 
-  ngOnInit(): void {
+  getAll(){
+    return this.project;
   }
 
-  selectProject(project:Project){
-    this.selectedProject = project;
+  add(project:Project):void{
+    // this.project.push(project)
+    this.project.push(
+      {  ...project,
+        id: this.project.length,
+        code: Math.random().toString(36).replace('0.', ''),
+        done: false,
+        task: [],
 
+      }
+    )
   }
 
-  submitProjectForm(f:any){
-    console.log('form di nostro interesse',f.status);
-
+  get(id:number):Project{
+    return this.project.find(project => project.id === id) as Project
   }
+
 
 }

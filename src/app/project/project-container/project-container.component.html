@@ -1,0 +1,11 @@
+<ngprj-section-header [title]=" 'I miei progetti Utili' "
+ [buttonClass]="'btn-primary'"
+ [buttonLabel]=" 'torna alla Dashboard' "
+ [buttonLink]=" '/home' "
+>
+</ngprj-section-header>
+
+ <hr>
+<ngprj-project-list [projects]="projects" (selected)="selectProject($event)"  ></ngprj-project-list>
+<ngprj-project-detail [project]="selectedProject" ></ngprj-project-detail>
+<ngprj-project-form (submitted)="submitProjectForm($event)"></ngprj-project-form>
