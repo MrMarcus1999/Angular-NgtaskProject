@@ -3,7 +3,7 @@ import { Component,OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Project } from 'src/app/models/Project';
 import { LogService } from 'src/app/shared/log.service';
-import { ProjectService } from '../project.service';
+import { ProjectService } from 'src/app/services/project.service';
 import { Observable,Observer, Subscription } from "rxjs";
 import { interval,PartialObserver } from "rxjs";
 import { map,filter } from "rxjs/operators";
@@ -67,11 +67,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'ngprj-project-container',
-  templateUrl: './project-container.component.html',
-   styleUrls: ['./project-container.component.css']
+  selector: 'ngprj-project-dashboard',
+  templateUrl: './project-dashboard.component.html',
+   styleUrls: ['./project-dashboard.component.css']
 })
-export class ProjectContainerComponent implements OnInit{
+export class ProjectDashboardComponent implements OnInit{
   subscription!: Subscription;
 
   // projects:Project[] = [];

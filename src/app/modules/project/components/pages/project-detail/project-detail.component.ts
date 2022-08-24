@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { Project } from 'src/app/models/Project';
-import { ProjectService } from '../project.service';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'ngprj-project-detail',
