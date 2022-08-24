@@ -11,6 +11,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SectionHeaderComponent } from './shared/section-header/section-header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SectionHeaderComponent } from './shared/section-header/section-header.c
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

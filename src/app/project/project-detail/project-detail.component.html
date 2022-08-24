@@ -1,8 +1,19 @@
-<div class="container-fluid py-5" *ngIf="project" >
-   <div class="card">
-    <div class="card-body">
-      <h1 class="display-5 fw-bold"> {{project.name}} </h1>
-      <p class="col-md-8 fs-4" > {{project.description}} </p>
+<ngprj-section-header [title]=" 'I miei progetti Utili' "
+ [buttonClass]="'btn-primary'"
+ [buttonLabel]=" 'torna alla Dashboard' "
+ [title]=" 'Dettaglio Progetto' "
+ [buttonLink]="  '/projects' "
+>
+</ngprj-section-header>
+
+<ng-container *ngIf="project$ | async as project" >
+  <div class="container-fluid py-5" >
+    <div class="card">
+     <div class="card-body">
+       <h1 class="display-5 fw-bold"> {{project.name}} </h1>
+       <p class="col-md-8 fs-4" > {{project.description}} </p>
+     </div>
     </div>
-   </div>
-</div>
+ </div>
+</ng-container>
+
