@@ -32,33 +32,14 @@
       "priority": "low",
       "done": false,
       "task": []
-    },
-    {
-      "name": "Marco",
-      "priority": "medium",
-      "start": "2022-09-02",
-      "description": "hello!",
-      "code": "1u4ahqmj5kn",
-      "done": false,
-      "task": [],
-      "id": 4
-    },
-    {
-      "name": "Marco2",
-      "priority": "high",
-      "start": "2022-08-26",
-      "description": "test di prova",
-      "code": "n1pueaqtssc",
-      "done": false,
-      "task": [],
-      "id": 5
     }
+
   ],
   "Tasks": [
     {
       "id": 1,
-      "code": "porcoddio",
-      "name": "procamadonna project",
+      "code": "firstP01",
+      "name": "EXAMPLE project",
       "description": "lorem ipsum0001",
       "start": "2021-1-30",
       "end": "2022,3,15",
@@ -68,7 +49,7 @@
     },
     {
       "id": 2,
-      "code": "firstP01",
+      "code": "firstP02",
       "name": "BETA project",
       "description": "lorem ipsum0021",
       "start": "2021-1-30",
@@ -79,7 +60,7 @@
     },
     {
       "id": 3,
-      "code": "firstP00",
+      "code": "firstP03",
       "name": "sigma project",
       "description": "lorem ipsum0031",
       "start": "2021-1-30",
